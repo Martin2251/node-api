@@ -5,16 +5,23 @@ import express from 'express';
 const router = express.Router();
 
 const users = [
-{
+  {
     firstName: "Adam",
     lastName: "Johnson",
     age: 100
-}
-]
+  },
+  {
+    firstName: "Adam",
+    lastName: "Eve",
+    age: 100
+  }
+  ]
 
 //path to users
 router.get('/', (req, res) => {
-  res.send('Hello');
+  console.log(users);
+
+  res.send(users);
 });
 
 export default router;
